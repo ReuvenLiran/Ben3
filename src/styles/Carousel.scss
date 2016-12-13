@@ -1,0 +1,38 @@
+.pointer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    height: 19px;
+    background: url(http://www.foxmovies.com/images/movie-pointer.png) center center no-repeat;
+    margin: 0 19px;
+}
+
+.pointer .left-triangle {
+    float: left;
+    margin-left: -19px;
+}
+
+.pointer .left-triangle, .pointer .right-triangle {
+    width: 50%;
+    height: 20px;
+    background: #f5f5f5;
+}
+
+.pointer .right-triangle {
+    float: right;
+    margin-right: -19px;
+}
+.pointer .left-triangle, .pointer .right-triangle {
+    width: 50%;
+    height: 20px;
+    background: #f5f5f5;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  width: 100%;
+  height: 50%;
+  margin: auto;
+}
