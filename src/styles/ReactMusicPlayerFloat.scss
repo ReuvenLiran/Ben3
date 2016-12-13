@@ -1,0 +1,159 @@
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: -50%;
+  -webkit-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  transform: translateY(50%);
+}
+
+button:active,
+button:focus,
+*:active,
+*:focus  {
+    -moz-outline-style: none; 
+    outline-style: none;
+    outline:0;
+} 
+
+.player-container {
+    background: #0099CC;
+    padding: 0;
+    height: inherit;
+    width: inherit;
+    position: fixed;
+    margin: 0 auto;
+    left: 0;
+    bottom: 0; 
+}
+
+.player-cover {
+    float : left;
+    position: relative;
+    height: inherit;
+    width: 10vw;
+    margin-right: 2vw;
+    background-position: top center;
+    background-size: cover;
+    transition: height .4s;
+}
+
+.artist-info {
+
+    margin: 0 auto;
+    border: 0;
+    top: 20%;
+    position: absolute;
+    width: inherit;
+    height: 50%;
+
+}
+
+.artist-name,
+.artist-song-name {
+    color: #CCFFCC;
+    margin: 0 auto;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: pre-wrap;
+    overflow: hidden;
+    font-family: 'Oswald', sans-serif; margin-left: 5%;
+}
+
+.artist-song-name {
+    margin-bottom: 4%;
+}
+
+.player-buttons {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 135px;
+}
+
+.player-btn {
+    margin: 0 auto;
+    color: #CCFFCC;
+    background-color: transparent;
+    
+    border: none;
+    outline:none;
+    height: 100%;
+    margin-right: 2vw;
+   // border-radius: 50%;
+    outline: 0;
+   
+    &.active{
+        color: #66CCFF;
+    }
+   
+    &.medium {
+        width: 30px; 
+        height: 100%;
+
+        i {
+            font-size: 2vw;
+        }
+    }
+
+    &.volume {
+        width: 40px;
+    }
+
+    &:disabled {
+        opacity: .5;
+    }
+}
+
+@media screen and (orientation: landscape) {
+  .player-container {
+     height : 8vmax;
+   } 
+    .artist-name,
+    .artist-song-name {
+        font-size : 1.2vmax;
+ } 
+
+ .player-cover {
+     width: 15vh;
+ }
+ .player-btn{
+
+    margin-left: 2vh;
+     &.big {
+        width: 20%;
+        height: 100%;
+      i {
+            font-size: 3vmax;
+        }
+     }
+ }
+}
+
+@media screen and (orientation: portrait) {
+  .player-container {
+     height : 14vmin;
+  } 
+ .artist-name,
+ .artist-song-name {
+    font-size : 1.5vmin;
+ } 
+ .player-cover {
+     width: 15vw;
+ }
+ .player-btn{
+      margin-left: 2vw;
+
+     &.big {
+        width: 20%;
+        height: 100%;
+        i {
+            font-size: 5.2vw;
+        }
+    }
+ } 
+}
+
+div {
+    padding:0px;
+    margin:0px;
+}
